@@ -1,0 +1,22 @@
+/* ~/.config/matugen/templates/swaync.css */
+
+/* Variable de couleur venant de Matugen */
+@define-color cc-bg #121318;
+@define-color noti-border #b2c5ff;
+@define-color noti-bg #1e1f25;
+@define-color text-color #e2e2e9;
+
+/* Le panneau de contrôle principal */
+.control-center {
+    background: @cc-bg;
+    border: 2px solid @noti-border;
+    border-radius: 12px;
+}
+
+/* La notification individuelle */
+.notification {
+    background: @noti-bg;
+    border: 2px solid @noti-border;
+    border-radius: 12px;
+    color: @text-color;
+}

@@ -1,0 +1,12 @@
+[[keymaps]]
+command = "None"
+key_sequence = "l"
+
+[[keymaps]]
+command = "LyricsPage"
+key_sequence = "L"
+
+[[actions]]
+action = "ToggleLiked"
+key_sequence = "l"
+target = "PlayingTrack"

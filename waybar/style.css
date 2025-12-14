@@ -1,0 +1,116 @@
+/* 1. IMPORT DES COULEURS MATUGEN */
+/* Modifie le chemin ci-dessous selon l'endroit où matugen génère ton fichier */
+@import "colors.css"; 
+
+* {
+    font-size: 14px;
+    font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free Solid", "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular", "Symbols Nerd Font Mono", "Symbols Nerd Font";
+    transition: all 0.5s ease;
+}
+
+window#waybar {
+    all: unset;
+}
+
+.modules-left {
+    margin: 5px 0px 2px 10px;
+}
+.modules-center {
+    margin: 5px 0px 2px 0px;
+}
+.modules-right {
+    margin: 5px 10px 2px 0px;
+}
+
+tooltip {
+    /* Utilise la couleur de surface pour le fond */
+    background: @surface;
+    /* Utilise la couleur 'outline' pour les bordures */
+    border: 1px solid alpha(@outline, 0.8);
+    color: @secondary;
+}
+
+/* Hover effect: Utilisation de la couleur Primaire */
+#clock:hover, #custom-updates:hover, #custom-notification:hover, #bluetooth:hover, #network:hover, #battery:hover, #cpu:hover, #memory:hover, #temperature:hover, #pulseaudio:hover, #language:hover, #mpris:hover, #custom-control-center:hover, #custom-updates:hover label {
+    color: @primary;
+}
+
+#custom-dnd:hover, #custom-tray-icon:hover {
+    color: @primary;
+}
+
+.modules-right .module, .modules-left .module, .modules-center .module {
+    color: @secondary;
+}
+
+/* Fond des modules : Utilisation de surface-container ou surface avec transparence */
+#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-control-center, #custom-updates, #privacy {
+    color: @secondary;
+    padding: 8px 15px;
+    margin: 0px 2px;
+    border-radius: 10px;
+    /* Surface avec légère transparence */
+    background: alpha(@surface, 0.95);
+    /* Ombre utilisant la couleur 'shadow' ou 'secondary' */
+    box-shadow: 0px 0px 2px alpha(@shadow, 0.35);
+}
+
+#audio .module, #connection .module, #misc .module {
+    margin: 0px 5px;
+}
+
+#workspaces {
+    margin-left: 0px;
+}
+#custom-control-center {
+    margin-right: 0px;
+}
+
+#workspaces button {
+    all: unset;
+    padding: 0px 10px;
+}
+
+/* Labels inactifs */
+#workspaces button label { 
+   color: alpha(@secondary, 0.5);
+}
+
+/* Hover sur workspaces */
+#workspaces button:hover label {
+    color: alpha(@secondary, 0.85);
+}
+
+/* Workspace actif : Utilisation de la couleur Primaire */
+#workspaces button.active label {
+    color: @primary;
+    font-weight: bold; /* Optionnel : rend l'actif plus visible */
+}
+
+#tray #tray { /* Inner tray element */
+    background-color: transparent;
+    padding: 0px 5px 0px 15px;
+    box-shadow: none;
+    border: none;
+}
+
+#tray menu {
+    background-color: alpha(@surface, 0.9);
+    border: solid 1px alpha(@outline, 0.8);
+}
+
+#tray menu separator {
+    background-color: alpha(@outline, 0.8);
+}
+
+#tray menu label {
+    color: @secondary;
+}
+
+#tray menu menuitem:hover {
+    background-color: @primary;
+}
+
+#tray menu menuitem:hover label {
+    color: @on_primary; /* Texte sur couleur primaire pour le contraste */
+}

@@ -1,0 +1,56 @@
+# --- Authentification & Connexion ---
+client_id = "a9ab98a243e741ceb3ab3cf87c45ec8c"
+client_port = 8989  # CORRIGÉ : On standardise sur 8888
+login_redirect_uri = "http://127.0.0.1:8989/login"
+# --- Apparence ---
+theme = "Catppuccin-mocha"
+playback_format = """
+{status} {track} • {artists} {liked}
+{album} • {genres}
+{metadata}"""
+playback_metadata_fields = ["volume", "device", "shuffle", "repeat"]
+
+# --- Comportement ---
+app_refresh_duration_in_ms = 32
+playback_refresh_duration_in_ms = 0
+page_size_in_rows = 20
+tracks_playback_limit = 50
+notify_timeout_in_secs = 0
+enable_media_control = true
+enable_streaming = "Always"
+enable_notify = true
+enable_cover_image_cache = true
+default_device = "spotify-player"
+seek_duration_secs = 5
+
+# --- Icones & Visuels ---
+play_icon = "▶"
+pause_icon = "▌▌"
+liked_icon = "♥"
+border_type = "Rounded"
+progress_bar_type = "Rectangle"
+progress_bar_position = "Bottom"
+cover_img_length = 12  # Agrandit un peu pour Kitty
+cover_img_width = 6
+cover_img_scale = 1.0
+
+[notify_format]
+summary = "{track} • {artists}"
+body = "{album}"
+
+[layout]
+playback_window_position = "Bottom"
+playback_window_height = 6
+
+[layout.library]
+playlist_percent = 40
+album_percent = 40
+
+[device]
+name = "spotify-player" # Le nom qui apparaitra dans Spotify Connect
+device_type = "computer" # "computer" est souvent plus stable que "speaker"
+volume = 70            # Volume fixe au démarrage
+bitrate = 320
+audio_cache = true     # CORRIGÉ : Indispensable pour éviter les coupures
+normalization = true   # CORRIGÉ : Évite que le volume explose au changement de titre
+autoplay = false
