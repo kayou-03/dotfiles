@@ -2,9 +2,9 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "custom/updates", "group/tray", "mpris"],
+        "modules-left": ["hyprland/workspaces", "group/tray", "mpris"],
         "modules-center": ["clock"],
-        "modules-right": ["privacy", "group/audio", "group/misc", "group/connection", "custom/control-center"],
+        "modules-right": ["group/audio", "group/misc", "group/connection", "custom/control-center"],
         "hyprland/workspaces": {
 			"all-outputs": false,	
             "format": "{name} <span font_size='8pt'>{windows}</span>",
@@ -12,19 +12,19 @@
 			"special-visible-only": true,
        		"window-rewrite-default": "",
 			"window-rewrite": {
-				"class<firefox>": "",
+				"class<zen>": "",
 				"sterminal": "",
 				"kitty": "",
-					"class<kitty> title<vim.*>": "",
+					"class<kitty> title<(.*) - Nvim>": "",
 				"class<UnrealEditor-?.*> title<.+>": "<span font_size='10pt'>󰦱</span>",
 				"class<UnrealEditor-?.*> title<>": "",
-				"class<io.github.achetagames.epic_asset_manager>": "",
 				"obsidian": "󰠮",
-				"code": "󰨞",
+			 	"Nvim": "",
+				"codium": "󰨞",
 				"title<btop>": "󰊚",
 				"KeePassXC": "",
 				"Rofi": "",
-				"Spotify": "","nautilus": "","Qalculate!": "", "com.stremio.stremio": "󱜅", 
+				"Spotify": "", "cava": "", "yazi": "","Qalculate!": "", "com.stremio.stremio": "󱜅", 
 				"steam": "","discord": " ","heroic": "",
 				"hl2_linux": "",
 				"Turtle-wow": "",
@@ -144,11 +144,11 @@
             "on-click": "kitty --class floating -e nmtui"
         },
         "bluetooth": {
-            "format": "󰂯 {status}",
-            "format-on": "󰂯",
-            "format-off": "󰂯 off",
-            "format-disabled": "󰂲",
-            "format-no-controller": "󰂲",
+            "format": "󰂯 {status} ",
+            "format-on": "󰂯 ",
+            "format-off": "󰂯 off ",
+            "format-disabled": "󰂲 ",
+            "format-no-controller": "󰂲 ",
 	    	"format-connected-battery": "{device_battery_percentage}% 󰂯",
             "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
             "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -228,10 +228,10 @@
 		},
 		"pulseaudio#input": {
      		"scroll-step": 1,
-        	"format": "{format_source}",
-        	"format-source": " {volume}%",
-	        "format-source-muted": " ",	
-			"tooltip-format": "{format_source}",
+        	"format": "{format_source} ",
+        	"format-source": " {volume}% ",
+	        "format-source-muted": "  ",	
+			"tooltip-format": "{format_source} ",
     		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",	
 		    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
 		    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%"
@@ -250,11 +250,5 @@
 			"tooltip-format": "{desc}",
 	        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 	        "on-click-right": "pavucontrol"
-		},
-		"hyprland/language": {
-			"format": "󰥻 {}",
-			"format-en": "en",
-			"format-es": "es",
-			"tooltip": true
 		}
 } 

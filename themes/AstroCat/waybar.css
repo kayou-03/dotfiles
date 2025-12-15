@@ -1,0 +1,12 @@
+/* --- FOND --- */
+@define-color base   transparent; 
+@define-color surface #17191E; 
+@define-color overlay #45464f;
+
+/* --- TEXTE --- */
+@define-color text   #bc8c9d;  
+@define-color subtext #8f909a; 
+
+/* --- ACCENTS --- */
+@define-color accent #bc8c9d;  
+@define-color urgent #ffb4ab;  

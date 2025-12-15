@@ -4,7 +4,7 @@
 	sort_sensitive = false
 	sort_reverse   = true
 	sort_dir_first = true
-	linemode       = "none"
+	linemode       = "size"
 	show_symlink   = true
 	scrolloff      = 5
 	show_hidden    = true
