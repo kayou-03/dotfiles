@@ -37,6 +37,7 @@
 		},
         "mpris": {
    		"player": "spotify_player",
+   	 	"player": "spotify",
 			"format": "{status_icon} {title} - {artist}",
 			"format-stopped": "{status_icon}",
 			"artist-len": 15,

@@ -4,9 +4,9 @@
 @define-color overlay #45464f;
 
 /* --- TEXTE --- */
-@define-color text   #bc8c9d;  
+@define-color text   #b2c5ff; 
 @define-color subtext #8f909a; 
 
 /* --- ACCENTS --- */
-@define-color accent #bc8c9d;  
+@define-color accent #b2c5ff; 
 @define-color urgent #ffb4ab;  
