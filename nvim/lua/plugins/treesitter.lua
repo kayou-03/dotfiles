@@ -9,5 +9,7 @@ return {
       "python",
       "c"
     },
+    indent = { enable = true },
+    autotag = { enable = true },
   },
 }

@@ -9,6 +9,19 @@ require("lazy").setup({
       icons_enabled = true, -- Set to false to disable icons (if no Nerd Font is available)
       pin_plugins = nil, -- Default will pin plugins when tracking `version` of AstroNvim, set to true/false to override
       update_notifications = true, -- Enable/disable notification about running `:Lazy update` twice to update pinned plugins
+      mappings = {
+        n = {
+          ["<Leader>lf"] = { vim.lsp.buf.format, desc = "Format current buffer" },
+          ["<leader>e"] = { ":NeoTree toggle<CR>", desc = "Toggle file explorer" },
+          ["<leader>b"] = { ":NeoTree toggle source=buffers<CR>", desc = "Toggle buffers view" },
+          ["<leader>g"] = { ":NeoTree toggle source=git_status<CR>", desc = "Toggle git status view" },
+        },
+      },
+      diagnostics = {
+        virtual_text = false, -- Disable virtual text for diagnostics
+        underline = true, -- Keep squiggly underlines
+        update_in_insert = false, -- Don't show diagnostics while in insert mode
+      },
     },
   },
   { import = "community" },
