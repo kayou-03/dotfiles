@@ -1,0 +1,44 @@
+/* ~/.config/rofi/wallpaper.rasi */
+configuration {
+    modi: "dmenu";
+    show-icons: true;
+    dmenu-display-format: "{name}";
+}
+
+window {
+    width: 80%;      /* Largeur de la fenêtre */
+    height: 70%;     /* Hauteur de la fenêtre */
+    border: 3px;
+    border-color: blue; 
+}
+
+/* La grille des images */
+listview {
+    columns: 4;      /* 4 images par ligne */
+    lines: 4;        /* 4 lignes visibles */
+    layout: vertical;
+    flow: horizontal;
+    spacing: 20px;   /* Espace entre les images */
+}
+
+/* Chaque "carte" (image + texte) */
+element {
+    orientation: vertical; /* Image au-dessus, texte en dessous */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+element selected {
+    background-color: grey; /* Couleur de sélection */
+}
+
+/* L'image elle-même */
+element-icon {
+    size: 200px;     /* TAILLE DE L'IMAGE (Gros pour effet affiche) */
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5; /* Texte centré sous l'image */
+    vertical-align: 0.5;
+}

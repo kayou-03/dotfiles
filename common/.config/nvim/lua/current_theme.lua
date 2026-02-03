@@ -1,0 +1,1 @@
+/home/noah/.config/themes/AstroCat/nvim_theme.lua
