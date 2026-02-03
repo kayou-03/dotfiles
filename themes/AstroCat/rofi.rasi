@@ -1,9 +1,0 @@
-* {
-   base: #17191E;
-   surface: #45464f;
-   overlay: #45464f;
-   text: #b2c5ff;
-   subtext: #8f909a;
-   accent : #b2c5ff;
-   urgent: #ffb4ab;
-}

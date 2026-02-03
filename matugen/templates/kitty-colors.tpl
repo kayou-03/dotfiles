@@ -1,2 +1,0 @@
-background            {{colors.surface.default.hex}}
-foreground            {{colors.on_surface.default.hex}}
