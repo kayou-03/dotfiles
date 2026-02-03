@@ -40,6 +40,15 @@ link_file "$THEME_DIR/waybar.css" "$HOME/.config/waybar/colors.css"
 # --- 3. Nvim ---
 link_file "$THEME_DIR/nvim_theme.lua" "$HOME/.config/nvim/lua/current_theme.lua"
 
+# --- 4. SWAYNC ---
+link_file "$THEME_DIR/swaync.css" "$HOME/.config/swaync/style.css"
+
+# --- 5. KITTY ---
+link_file "$THEME_DIR/kitty_colors.conf" "$HOME/.config/kitty/colors.conf"
+
+# --- 6. Rofi ---
+link_file "$THEME_DIR/rofi.rasi" "$HOME/.config/rofi/colors.rasi"
+
 hyprctl reload
 
 pkill waybar
