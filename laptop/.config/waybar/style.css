@@ -1,0 +1,81 @@
+/* 1. IMPORT DU THÈME */
+@import "colors.css"; 
+
+* {
+    font-size: 14px;
+    font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free Solid", "Symbols Nerd Font";
+    transition: all 0.3s ease; /* J'ai réduit à 0.3s, 0.5s fait un peu "mou" */
+}
+
+window#waybar {
+    background-color: @base; /* Fond de la barre */
+    color: @text;
+}
+
+/* --- ESPACEMENT --- */
+.modules-left { margin: 5px 0px 2px 10px; }
+.modules-center { margin: 5px 0px 2px 0px; }
+.modules-right { margin: 5px 10px 2px 0px; }
+
+/* --- TOOLTIPS (Bulles d'info) --- */
+tooltip {
+    background: @surface;
+    border: 1px solid @overlay;
+    color: @text;
+    border-radius: 10px;
+}
+
+/* --- DESIGN DES MODULES --- */
+#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-control-center, #custom-updates, #privacy {
+    background-color: @surface; /* Fond des modules */
+    color: @text;
+    padding: 8px 15px;
+    margin: 0px 4px; /* Un peu plus d'espace entre les modules */
+    border-radius: 12px;
+    border: 1px solid transparent; /* Prépare la bordure pour le hover */
+}
+
+/* --- WORKSPACES --- */
+#workspaces button {
+    all: unset;
+    padding: 0px 10px;
+    color: @subtext; /* Inactif = grisé */
+}
+
+#workspaces button:hover label {
+    color: @text;
+}
+
+#workspaces button.active label {
+    color: @accent; /* Actif = Couleur Accent */
+    font-weight: bold;
+}
+
+/* --- TRAY (Icônes système) --- */
+#tray menu {
+    background-color: @base;
+    border: 1px solid @overlay;
+}
+
+#tray menu menuitem:hover {
+    background-color: @surface;
+}
+
+/* --- HOVER EFFECTS (Survol) --- */
+/* Quand on passe la souris sur un module, le texte/icone prend la couleur d'accent */
+#clock:hover, 
+#custom-updates:hover, 
+#bluetooth:hover, 
+#network:hover, 
+#battery:hover, 
+#cpu:hover, 
+#audio:hover, 
+#custom-control-center:hover {
+    color: @accent;
+    border-color: @overlay; /* Petit effet de bordure au survol */
+}
+
+/* Cas spécifiques */
+#custom-dnd:hover, #custom-tray-icon:hover {
+    color: @accent;
+}
