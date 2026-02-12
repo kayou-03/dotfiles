@@ -17,6 +17,11 @@ zd() {
   fi
 }
 
+pdf() {
+    file=$(find . -name "*.pdf" | fzf)
+    [ -n "$file" ] && zathura "$file" & disown
+}
+
 # Invite de commande simple
 export PS1="%n@%m:%~$ "
 
