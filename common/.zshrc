@@ -40,3 +40,7 @@ export PATH="HOME/.cargo/bin:$PATH"
 export EDITOR='nvim'
 
 export PATH=$PATH:/home/noah/.spicetify
+
+export QSYS_ROOTDIR="/home/noah/tmp_build/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/25.1/quartus/sopc_builder/bin"
+export PATH=$PATH:/opt/intelFPGA/25.1/quartus/bin
+export PATH=$PATH:~/tizen-studio/tools/ide/bin:~/tizen-studio/tools
