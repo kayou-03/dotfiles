@@ -1,20 +1,29 @@
-!common/
-!desktop/
-!laptop/
-!.gitignore
+# Fichiers temporaires et sauvegardes
+*.swp
+*.swo
+*~
+.DS_Store
 
+# Historique Shell (sécurité)
+.zhistory
+.zsh_history
+.bash_history
 
-!hypr/
-!waybar/
-!kitty/
-!yazi/
-!rofi/
-!scripts/
-!matugen/
-!nvim/
-!spotify-player/
-!swaync/
-!cava/
-!fontconfig/
-!zsh/
-!themes/
+# Caches et dossiers de runtime
+.cache/
+node_modules/
+__pycache__/
+.venv/
+dist/
+build/
+
+# Neovim
+undo/
+backups/
+swap/
+
+# Secrets et clés (sécurité)
+.env
+*.pem
+*.key
+auth.json

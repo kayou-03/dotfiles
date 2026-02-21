@@ -1,6 +1,7 @@
 # Initialise zoxide sans alias cd
 eval "$(zoxide init zsh)"
 eval "$(ssh-agent -s)" > /dev/null
+eval "$(starship init zsh)"
 
 alias ipad='uxplay -n Arch -nh -avdec'
 alias y='yazi'
