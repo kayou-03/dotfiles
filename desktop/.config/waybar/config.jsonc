@@ -12,7 +12,7 @@
 			"special-visible-only": true,
        		"window-rewrite-default": "",
 			"window-rewrite": {
-				"class<zen>": "",
+				"firefox": "",
 				"sterminal": "",
 				"kitty": "",
 					"class<kitty> title<(.*) - Nvim>": "",
@@ -31,7 +31,8 @@
 				"Minecraft Launcher": "",
 					"class<(Minecraft\\s\\d\\.\\d+\\.\\d+)>": "",
 				"class<(steam_proton)>": "",
-				"class<(steam_app_.*)>": ""
+				"class<(steam_app_.*)>": "",
+			   "betterbird": ""
 			} 
 
 		},
