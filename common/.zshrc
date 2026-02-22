@@ -17,6 +17,7 @@ alias ipad='uxplay -n Arch -nh -avdec'
 alias y='yazi'
 alias fl='fscrypt lock'
 alias fu='fscrypt unlock'
+alias stow='stow --no-folding'
 
 #Remplace zd par cd et affiche pwd
 alias cd="zd"

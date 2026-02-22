@@ -1,0 +1,7 @@
+.config/hypr/config/colors.conf
+.config/kitty/colors.conf
+.config/rofi/colors.rasi
+.config/nvim/lua/current_theme.lua
+.config/swaync/notifications.css
+.config/swaync/central_control.css
+.config/starship.toml
