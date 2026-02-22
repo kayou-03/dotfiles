@@ -1,6 +1,6 @@
 ff() {
     # Remplace par le chemin de ton dossier
-    local IMG_DIR="$HOME/Images/fastfetch_anime_clean/"
+    local IMG_DIR="$HOME/Images/fastfetch_animes/"
     
     # Sélectionne une image aléatoire (.png ou .jpg)
     local RANDOM_IMG=$(find "$IMG_DIR" -type f \( -iname \*.png -o -iname \*.jpg \) | shuf -n 1)
