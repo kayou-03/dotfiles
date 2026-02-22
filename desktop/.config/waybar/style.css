@@ -4,7 +4,6 @@
 * {
     font-size: 14px;
     font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free Solid", "Symbols Nerd Font";
-    transition: all 0.3s ease; /* J'ai réduit à 0.3s, 0.5s fait un peu "mou" */
 }
 
 window#waybar {
@@ -26,7 +25,7 @@ tooltip {
 }
 
 /* --- DESIGN DES MODULES --- */
-#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-control-center, #custom-updates, #privacy {
+#mpris, #clock, #workspaces, #perf, #misc, #audio, #connection, #custom-control-center, #custom-updates, #privacy {
     background-color: @surface; /* Fond des modules */
     color: @text;
     padding: 8px 15px;
@@ -52,9 +51,15 @@ tooltip {
 }
 
 /* --- TRAY (Icônes système) --- */
-#tray menu {
-    background-color: @base;
-    border: 1px solid @overlay;
+#tray {
+    background-color: @surface;
+    color: @text;
+    margin: 0px 4px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    
+    /* Réduis le padding ici */
+    padding: 0px 6px; 
 }
 
 #tray menu menuitem:hover {

@@ -1,19 +1,7 @@
-[[plugin.deps]]
-use = "ahkohd/eza-preview"
-rev = "a97cf55"
-hash = "cc3aef07a8b1c3fe820f1fbb9a5a2483"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:full-border"
-rev = "8f1d971"
-hash = "3996fc74044bc44144b323686f887e1"
-
-[[flavor.deps]]
-use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "ffe6e3a"
-hash = "8d7799e4598ff079fa5ee5c770d9bc08"
+[plugin]
+deps = []
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"
-rev = "ffe6e3a"
-hash = "9b9a8e91898a73c1211788a4ed30336"
+rev = "3001521"
+hash = "2f60298d6c26b6d388c8091a9389fa8f"

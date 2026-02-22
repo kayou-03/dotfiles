@@ -41,7 +41,8 @@ link_file "$THEME_DIR/waybar.css" "$HOME/.config/waybar/colors.css"
 link_file "$THEME_DIR/nvim_theme.lua" "$HOME/.config/nvim/lua/current_theme.lua"
 
 # --- 4. SWAYNC ---
-link_file "$THEME_DIR/swaync.css" "$HOME/.config/swaync/style.css"
+link_file "$THEME_DIR/swaync-notif.css" "$HOME/.config/swaync/notifications.css"
+link_file "$THEME_DIR/swaync-panel.css" "$HOME/.config/swaync/central_control.css"
 
 # --- 5. KITTY ---
 link_file "$THEME_DIR/kitty_colors.conf" "$HOME/.config/kitty/colors.conf"

@@ -15,6 +15,8 @@ eval "$(starship init zsh)"
 
 alias ipad='uxplay -n Arch -nh -avdec'
 alias y='yazi'
+alias fl='fscrypt lock'
+alias fu='fscrypt unlock'
 
 #Remplace zd par cd et affiche pwd
 alias cd="zd"
