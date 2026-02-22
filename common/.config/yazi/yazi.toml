@@ -109,7 +109,7 @@ preview_hover = { underline = true }
 		{ mime = "application/vnd.ms-opentype", run = "font" },
 	]
 	prepend_previewers = [
-
+		{ name = "*.toml", run = "bat" },
 		{ name = "*/", run = "eza-preview" },
 
 		# Archive previewer

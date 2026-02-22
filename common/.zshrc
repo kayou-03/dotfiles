@@ -1,12 +1,9 @@
 ff() {
-    # Remplace par le chemin de ton dossier
-    local IMG_DIR="$HOME/Images/fastfetch_animes/"
+    local IMG_DIR="$HOME/Images/fastfetch_animes"
+    # Ajout de l'extension gif dans la recherche
+    local RANDOM_IMG=$(find "$IMG_DIR" -type f \( -iname \*.png -o -iname \*.jpg -o -iname \*.gif \) | shuf -n 1)
     
-    # Sélectionne une image aléatoire (.png ou .jpg)
-    local RANDOM_IMG=$(find "$IMG_DIR" -type f \( -iname \*.png -o -iname \*.jpg \) | shuf -n 1)
-    
-    # Lance fastfetch avec l'image sélectionnée
-    fastfetch --logo "$RANDOM_IMG" --logo-type kitty --logo-width 30
+    fastfetch --logo "$RANDOM_IMG" --logo-type kitty --logo-width 35
 }
 
 ff
