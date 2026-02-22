@@ -1,0 +1,31 @@
+# ~/.config/themes/AstroCat/colors_starship.toml
+# Configuration Starship pour le thème Catppuccin Macchiato
+
+format = "$username$directory$git_branch$git_status$character"
+
+[username]
+show_always = true
+format = "[$user]($style) "
+style_user = "bold #eed49f" # Yellow
+
+[directory]
+style = "bold #8aadf4" # Blue
+read_only = " 󰌾"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = " "
+style = "bold #f5bde6" # Magenta
+
+[git_status]
+style = "bold #ed8796" # Red
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[character]
+success_symbol = "[➜](bold #a6da95) " # Green
+error_symbol = "[➜](bold #ed8796) " # Red
+
+# Désactiver le module Lua
+[lua]
+disabled = true

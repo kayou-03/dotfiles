@@ -1,3 +1,16 @@
+ff() {
+    # Remplace par le chemin de ton dossier
+    local IMG_DIR="$HOME/Images/fastfetch_anime_clean/"
+    
+    # Sélectionne une image aléatoire (.png ou .jpg)
+    local RANDOM_IMG=$(find "$IMG_DIR" -type f \( -iname \*.png -o -iname \*.jpg \) | shuf -n 1)
+    
+    # Lance fastfetch avec l'image sélectionnée
+    fastfetch --logo "$RANDOM_IMG" --logo-type kitty --logo-width 30
+}
+
+ff
+
 # Initialise zoxide sans alias cd
 eval "$(zoxide init zsh)"
 eval "$(ssh-agent -s)" > /dev/null
@@ -24,7 +37,7 @@ pdf() {
 }
 
 # Invite de commande simple
-export PS1="%n@%m:%~$ "
+# export PS1="%n@%m:%~$ "
 
 # Historique
 HISTFILE=~/.histfile
@@ -45,3 +58,19 @@ export PATH=$PATH:/home/noah/.spicetify
 export QSYS_ROOTDIR="/home/noah/tmp_build/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/25.1/quartus/sopc_builder/bin"
 export PATH=$PATH:/opt/intelFPGA/25.1/quartus/bin
 export PATH=$PATH:~/tizen-studio/tools/ide/bin:~/tizen-studio/tools
+
+# Charger zsh-autosuggestions
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Alias pour lsd
+alias ls="lsd"
+alias l="lsd -l"
+alias la="lsd -a"
+alias lla="lsd -la"
+alias lt="lsd --tree"
+
+
+export LS_COLORS="${LS_COLORS}:ow=01;34"
+
+# Activer zsh-syntax-highlighting (doit être à la fin)
+source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -49,6 +49,9 @@ link_file "$THEME_DIR/kitty_colors.conf" "$HOME/.config/kitty/colors.conf"
 # --- 6. Rofi ---
 link_file "$THEME_DIR/rofi.rasi" "$HOME/.config/rofi/colors.rasi"
 
+# --- 7. Starship ---
+link_file "$THEME_DIR/colors_starship.toml" "$CONFIG_DIR/starship.toml"
+
 hyprctl reload
 
 pkill waybar
