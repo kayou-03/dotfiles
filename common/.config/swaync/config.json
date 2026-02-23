@@ -88,8 +88,8 @@
           "command": "kitty -e bluetui"
         },
         {
-          "label": "󰏘",
-          "command": "nwg-look"
+          "label": "⏻",
+          "command": "~/.config/scripts/powermenu/powermenu.sh"
         }
         
       ]
