@@ -18,7 +18,7 @@ require("lazy").setup({
         },
       },
       diagnostics = {
-        virtual_text = false, -- Disable virtual text for diagnostics
+        virtual_text = true, -- Enable virtual text for diagnostics
         underline = true, -- Keep squiggly underlines
         update_in_insert = false, -- Don't show diagnostics while in insert mode
       },

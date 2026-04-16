@@ -16,10 +16,17 @@ return {
   opts = {
     -- change colorscheme
     colorscheme = active_theme,
+    -- enable transparency
+    transparent = true,
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
-        -- Normal = { bg = "#000000" },
+        Normal = { bg = "NONE", ctermbg = "NONE" },
+        NormalNC = { bg = "NONE", ctermbg = "NONE" },
+        CursorLine = { bg = "NONE", ctermbg = "NONE" },
+        CursorLineNr = { bg = "NONE", ctermbg = "NONE" },
+        NormalFloat = { bg = "NONE", ctermbg = "NONE" },
+        FloatBorder = { bg = "NONE", ctermbg = "NONE" },
         NeoTreeGitIgnored = { link = "Normal" },
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme

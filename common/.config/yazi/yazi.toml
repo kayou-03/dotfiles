@@ -14,6 +14,10 @@ view_img = [
     { run = 'nsxiv -a "$@"', detach = true, desc = "nsxiv" },
 ]
 
+view_pdf = [
+    { run = 'zathura "$1" > /dev/null 2>&1', block = true, for = "unix", desc = "zathura" },
+]
+
 [open]
 rules = [
     # Images : on utilise nsxiv
@@ -28,4 +32,6 @@ rules = [
     
     # Catch-all pour tout ce qui est éditable (fallback)
     { name = "*.{txt,md,c,cpp,py,sh,lua,toml,conf,css}", use = "edit" },
+
+    { name = "application/pdf", use = "view_pdf" },
 ]

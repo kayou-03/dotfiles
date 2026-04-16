@@ -14,7 +14,14 @@ eval "$(ssh-agent -s)" > /dev/null
 eval "$(starship init zsh)"
 
 alias ipad='uxplay -n Arch -nh -avdec'
-alias y='yazi'
+function y(){
+   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+   yazi "$@" --cwd-file="$tmp"
+   if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+      builtin cd -- "$cwd"
+   fi
+   rm -f -- "$tmp"
+}
 alias fl='fscrypt lock'
 alias fu='fscrypt unlock'
 alias stow='stow --no-folding'
